@@ -36,17 +36,120 @@
 		</div>
 	  </div>
 	</nav>
-	<div class="container">
+	<div class="container"  style="display:block;" id="english">
 		<!-- 
 			Todo: Add to your team_stats.html page the following components:
-				1. JumboTron announcing the Fall 2018 Season
+				1. JumboTron announcing the Fall 2018 Season		
 				2. A table listing 3 different football matches (Colorado State, Nebraska, & New Hampshire)
 				3. A second table listing the Win/Loss ratio for the season
 		-->
+		<div class='jumbotron'>
+			<h1 class="text-center" style="font-size: 90px;">
+				GET PUMPED FOR EGG HAND THING
+			</h1>
+		</div>
+		<div>
+			<table border="2">
+				<tr>
+					<th colspan="4" rowspan="2">Team</th>
+					<th colspan="4" rowspan="2">Date</th>
+					<th colspan="4">Score</th>
+				</tr>
+				<tr>
+					<th colspan="2">home</th>
+					<th colspan="2">away</th>
+				</tr>
+				<tr>
+					<th colspan="4">CSU</th>
+					<th colspan="4">10/4/18</th>
+					<th colspan="2">44</th>
+					<th colspan="2">12</th>
+				</tr>
+				<tr>
+					<td>Cell 2 </td>
+					<td>Cell 3</td>
+				</tr>
+				<tr>
+					<td colspan="2">Cell 4</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<button class="btn btn-primary" onclick="switcheroo('s')">spanish</button>
+		</div>
+		
 	</div>
+
+
+
+
+
+
+
+	<div class="container" style="display:none;" id="spanish">
+		<!-- 
+				Todo: Add to your team_stats.html page the following components:
+					1. JumboTron announcing the Fall 2018 Season		
+					2. A table listing 3 different football matches (Colorado State, Nebraska, & New Hampshire)
+					3. A second table listing the Win/Loss ratio for the season
+			-->
+		<div class='jumbotron'>
+			<h1 class="text-center" style="font-size: 90px;">
+				¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡
+			</h1>
+		</div>
+		<div>
+			<table border="2">
+				<tr>
+					<th>encabezamiento 1</th>
+					<th rowspan="2">encabezamiento 2</th>
+				</tr>
+				<tr>
+					<td>célula 1</td>
+				</tr>
+				<tr>
+					<td>célula 2 </td>
+					<td>célula 3</td>
+				</tr>
+				<tr>
+					<td colspan="2">célula 4</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<button class="btn btn-primary" onclick="switcheroo('e')">english</button>
+		</div>
+			
+		</div>
   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+	function switcheroo(choice) {
+		var e = document.getElementById("english");
+		var s = document.getElementById("spanish");
+
+		if (choice == "e") {
+			if (e.style.display === "block") {
+				e.style.display = "none";
+			} else {
+				e.style.display = "block";
+				s.style.display = "none";
+			}
+		}
+
+
+		if (choice == "s") {
+			if (s.style.display === "block") {
+				s.style.display = "none";
+			} else {
+				s.style.display = "block";
+				e.style.display = "none";
+			}
+		}
+	}
+</script>
